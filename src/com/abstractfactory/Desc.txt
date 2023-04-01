@@ -1,0 +1,14 @@
+The Abstract Factory Pattern is a creational design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes. It allows you to create objects that are related to each other, without having to specify their concrete implementation. This makes it easy to swap between different families of objects, without changing the code that uses them.
+
+The pattern consists of several components:
+AbstractFactory: an interface that defines the methods for creating the related objects.
+ConcreteFactory: a class that implements the AbstractFactory interface and creates the concrete objects.
+AbstractProduct: an interface that defines the methods that the related objects will implement.
+ConcreteProduct: a class that implements the AbstractProduct interface.
+
+---------
+
+Let's say we are creating a game that has different themes: "Fantasy" and "Sci-Fi".
+We want to be able to create different game elements such as characters, weapons, and vehicles, based on the selected theme.
+We can create an abstract factory interface GameFactory which has methods for creating these game elements, and two concrete factory classes FantasyGameFactory and SciFiGameFactory which implement the GameFactory interface and create concrete game elements for the respective themes.
+
