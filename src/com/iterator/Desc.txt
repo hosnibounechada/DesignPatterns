@@ -1,0 +1,13 @@
+The Iterator pattern is a behavioral design pattern that provides a way to access the elements of a collection object in a sequential manner, without exposing the underlying implementation of the collection. It is used to decouple the client code from the collection, making it easy to add new types of collections or modify the existing ones without affecting the client code.
+
+In the Iterator pattern, we have two main components: the Iterator and the Collection. The Iterator defines a common interface for accessing the elements of a collection, while the Collection defines the interface for creating the Iterator.
+
+-----------
+
+In this example, we define a collection of names using the NameRepository class. The NameRepository class implements the Collection interface, which defines the getIterator method for creating an iterator object.
+
+The NameRepository class also defines a private inner class NameIterator which implements the Iterator interface. The NameIterator class provides the implementation for iterating over the collection of names.
+
+In the Client class, we create an instance of the NameRepository class and get an iterator object using the getIterator method. We then use the iterator to access the elements of the collection in a sequential manner, without exposing the underlying implementation of the collection.
+
+By using the Iterator pattern, we can easily modify the implementation of the collection without affecting the client code that uses the iterator. We can also reuse the iterator for different types of collections.

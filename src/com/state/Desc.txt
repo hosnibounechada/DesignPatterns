@@ -1,0 +1,15 @@
+The State pattern is a behavioral design pattern that allows an object to alter its behavior when its internal state changes. The pattern is useful in scenarios where the behavior of an object needs to change based on its state, and there are multiple states and transitions between them.
+
+In the State pattern, we have three main components: the Context, the State, and the ConcreteState. The Context represents the object whose behavior needs to change, while the State and ConcreteState represent the different states and their associated behaviors.
+
+-----------
+
+In this example, we have a Context class that represents a player. The player can be in two states: start state and stop state. We define the State interface that defines the behavior for the different states, and two concrete classes StartState and StopState that implement the State interface.
+
+The Context class maintains a reference to the current state of the player and provides methods to set and get the current state. The StartState and StopState classes implement the doAction method that changes the state of the player and performs the associated action.
+
+In the Client class, we create an instance of the Context class and call the doAction method on the StartState object to set the initial state of the player. We then print the current state of the player using the toString method.
+
+We then call the doAction method on the StopState object to change the state of the player to stop state, and print the current state of the player again.
+
+By using the State pattern, we can easily add new states and their associated behaviors without modifying the existing code. We can also reuse the same states for different contexts, making the code more modular and flexible.

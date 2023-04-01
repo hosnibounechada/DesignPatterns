@@ -1,0 +1,19 @@
+
+
+------------
+
+In this example, we have three classes:
+
+Observer is an interface that defines the update method that will be called when the subject's state changes.
+
+Subject is the class that the observers will watch. It maintains a list of observers and provides methods to add and remove observers, as well as to notify all observers of a change.
+
+ConcreteObserver is a class that implements the Observer interface. It has a name that is used to identify the observer when it is notified.
+
+In the ObserverDemo class, we create a Subject object and two ConcreteObserver objects. We add both observers to the subject and notify them. Then, we remove one of the observers and notify the remaining observer. When we run the program, we get the following output:
+
+Observer 1 has been notified
+Observer 2 has been notified
+Observer 2 has been notified
+
+This output shows that both observers were initially notified, but only the second observer was notified after the first observer was removed from the subject.

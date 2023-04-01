@@ -1,0 +1,11 @@
+The Template Method pattern is a behavioral design pattern that defines the skeleton of an algorithm in a superclass and lets subclasses override specific steps of the algorithm without changing its structure. In other words, it defines a blueprint for an algorithm and allows subclasses to provide concrete implementations for specific steps.
+
+This pattern is used when we have a common algorithm that is shared across multiple classes, but each class has its own way of implementing some parts of the algorithm. By defining the skeleton of the algorithm in a superclass, we can avoid code duplication and ensure consistency in the behavior of the classes.
+
+-------------
+
+In this example, Coffee is the abstract class that defines the template method prepareCoffee(). The prepareCoffee() method calls the abstract methods brewCoffee() and addCondiments() which are implemented by the subclasses Espresso and Latte.
+
+When the Client runs, it creates an instance of Espresso and Latte and calls their prepareCoffee() method. The output shows the steps of the algorithm being executed in the order defined in the Coffee class.
+
+This example demonstrates how the Template Method pattern allows subclasses to implement specific steps of an algorithm without changing its overall structure.

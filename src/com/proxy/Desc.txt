@@ -1,0 +1,13 @@
+The Proxy pattern is a structural design pattern that allows an object to act as a stand-in for another object.
+The proxy controls access to the original object, allowing it to add additional functionality or restrict access as needed.
+The Proxy pattern is useful when you want to add a layer of indirection to control access to an object or to add extra behavior when accessing an object.
+
+-------
+
+In this example, we have an Internet interface with a connectTo method that connects to a specified server host. The RealInternet class implements the Internet interface and provides the actual implementation of the connectTo method.
+
+The InternetProxy class acts as a proxy for the RealInternet class. It maintains a reference to the RealInternet object and adds extra functionality to the connectTo method. In this case, it checks if the user is allowed to access the specified server host before connecting to it.
+
+Finally, the Client class uses the InternetProxy object to connect to the internet. When the connectTo method is called, the InternetProxy object first checks if the user is allowed to access the specified server host before calling the connectTo method of the RealInternet object.
+
+By using the Proxy pattern, we can control access to the RealInternet object and add extra functionality to the connectTo method as needed.

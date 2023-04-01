@@ -1,0 +1,15 @@
+The Flyweight pattern is a structural design pattern that is used to minimize memory usage and improve performance by sharing as much data as possible with other similar objects. The idea behind the Flyweight pattern is to avoid creating large numbers of similar objects that have the same intrinsic properties, and instead reuse a single object to represent many different instances.
+
+The Flyweight pattern achieves this by separating the intrinsic properties of an object from its extrinsic properties. Intrinsic properties are those that are common to many objects and can be shared, while extrinsic properties are unique to each object and cannot be shared.
+
+The Flyweight pattern provides a centralized factory that creates and manages shared Flyweight objects. The Flyweight objects store only the intrinsic properties, while the extrinsic properties are passed in as parameters when the objects are used.
+
+-----------
+
+In this example, we have an interface Shape that defines the draw() method, and a concrete implementation Circle that implements the Shape interface. The Circle class has a single property, color, which is an intrinsic property that can be shared among multiple Circle objects.
+
+We also have a ShapeFactory class that provides a centralized factory for creating and managing shared Circle objects. The factory maintains a HashMap that maps String colors to Circle objects. When a client requests a Circle object with a specific color, the factory checks if it has already created a Circle object with that color. If it has, it returns the existing object. If not, it creates a new Circle object, adds it to the HashMap, and returns it.
+
+By using the Flyweight pattern in this way, we can minimize the memory usage and improve the performance of our application by sharing Circle objects that have the same color, rather than creating a new Circle object for each color.
+
+Overall, the Flyweight pattern is useful in situations where we have many similar objects that can share common intrinsic properties. By using the Flyweight pattern, we can reduce memory usage and improve performance by sharing as much data as possible among similar objects.

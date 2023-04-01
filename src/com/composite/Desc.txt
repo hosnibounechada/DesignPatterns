@@ -1,0 +1,11 @@
+
+
+------------
+
+In this example, we have two classes: File and Folder, that represent files and folders in a file system. Both classes extend the abstract FileComponent class, which defines the interface for adding and removing file components, getting the name of a file component, and printing the file system structure.
+
+The Folder class has a list of FileComponent objects that can be either File or Folder. When we call the print() method on a Folder object, it prints its own name and then iterates over all its file components and prints their names recursively.
+
+This allows us to create a tree-like structure of files and folders, where a folder can contain other folders and files, and so on. The Composite pattern is used to treat both files and folders uniformly and recursively traverse the entire tree structure.
+
+As you can see, the Composite pattern allows us to create a tree-like structure of objects that can be treated uniformly, and perform operations recursively on the entire structure.

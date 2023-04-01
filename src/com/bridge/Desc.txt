@@ -1,0 +1,20 @@
+
+
+------------
+
+In this example, we have four classes:
+
+DrawingAPI is the interface that defines the methods for drawing a circle.
+
+DrawingAPI1 and DrawingAPI2 are the concrete implementations of the DrawingAPI interface. They have different implementations for drawing a circle.
+
+Shape is an abstract class that represents a shape. It has a reference to a DrawingAPI object and an abstract draw method.
+
+Circle is a concrete subclass of Shape that represents a circle. It has its own coordinates and radius, and it implements the draw method by calling the drawCircle method of the DrawingAPI object.
+
+In the BridgeDemo class, we create two circles, each with a different DrawingAPI object. We then call the draw method on each shape, which in turn calls the appropriate drawCircle method on the DrawingAPI object. When we run the program, we get the following output:
+
+API1.circle at 1.000000:2.000000 radius 3.000000
+API2.circle at 5.000000:7.000000 radius 11.000000
+
+This output shows that the circles were drawn using the appropriate DrawingAPI implementation. The Circle class doesn't have to worry about the details of how to draw a circle; it just calls the drawCircle method of the DrawingAPI object. The DrawingAPI interface and its implementations are completely separate from the Shape hierarchy, allowing us to easily add new shapes and drawing APIs in the future without having to modify existing code.

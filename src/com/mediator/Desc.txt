@@ -1,0 +1,13 @@
+The Mediator pattern is a behavioral design pattern that provides a centralized mediator object to manage the communication between a set of objects. It promotes loose coupling by keeping objects from referring to each other explicitly and allows for better maintainability and scalability of a system.
+
+In the Mediator pattern, we have two types of objects: the Mediator and the Colleagues. The Mediator is responsible for managing the communication between the Colleagues, which do not communicate with each other directly but instead communicate through the Mediator.
+
+-------------
+
+In this example, we have a Mediator interface that defines the sendMessage method for sending messages between Colleagues. We then define a ConcreteMediator class that implements the Mediator interface and keeps references to the Colleagues.
+
+We also define an abstract Colleague class that defines the sendMessage and receiveMessage methods, which are implemented by two concrete classes Colleague1 and Colleague2. The sendMessage method sends messages through the mediator, and the receiveMessage method receives messages from the mediator.
+
+In the Client class, we create instances of the ConcreteMediator, Colleague1, and Colleague2 classes. We then set the ConcreteMediator as the mediator for the Colleagues and send messages between them using the sendMessage method.
+
+By using the Mediator pattern, we can reduce the complexity of the interactions between Colleagues and allow for better encapsulation and reusability of the code. It also provides a centralized point for managing communication, making it easier to modify and maintain the system.

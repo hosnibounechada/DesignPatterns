@@ -1,0 +1,13 @@
+The Memento pattern is a behavioral design pattern that allows an object to capture and save its internal state so that it can be restored later without violating encapsulation. This pattern is used when we want to save and restore the state of an object in such a way that it is not visible to other objects.
+
+The Memento pattern consists of three main parts: the originator, the memento, and the caretaker. The originator is the object whose state we want to save and restore. The memento is the object that stores the saved state of the originator. The caretaker is the object that manages the mementos and provides an interface to the originator for saving and restoring its state.
+
+----------
+
+In this example, we have an Originator class that has a state field, which represents the internal state of the object. The Originator class has two methods to save and restore its state: saveStateToMemento() and getStateFromMemento(). The saveStateToMemento() method creates a new Memento object with the current state of the Originator, and the getStateFromMemento() method restores the state of the Originator from a Memento object.
+
+The Memento class represents the saved state of the Originator. It has a state field that stores the state of the Originator, and a getState() method to retrieve the saved state.
+
+The Caretaker class manages the Memento objects and provides an interface to the Originator for saving and restoring its state. It has a list of Memento objects, and two methods to add and retrieve Memento objects.
+
+In the Client class, we create an instance of the Originator and Caretaker classes. We set the state of the Originator to "State1", "State2", and "State3", and save the state to the Caretaker using the saveStateToMemento() method.

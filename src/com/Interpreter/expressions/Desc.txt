@@ -1,0 +1,13 @@
+The Interpreter pattern is a behavioral design pattern that allows you to define a grammar for a language and provide an interpreter that can parse sentences in that language. It is used to solve problems related to interpreting user input or processing text-based data.
+
+In the Interpreter pattern, we have two main components: the Context and the Expression. The Context contains information that is shared across all expressions in a given sentence, while the Expression represents a terminal or non-terminal symbol in the language.
+
+-------------
+
+In this example, we define a language for describing marital status, with rules for checking if a person is married or single. We define three types of expressions: TerminalExpression, AndExpression, and OrExpression.
+
+The TerminalExpression class represents a terminal symbol in the language (e.g. "married", "unmarried", "single", etc.). The AndExpression and OrExpression classes represent non-terminal symbols in the language (e.g. "Robert is married" or "John is unmarried").
+
+The Context class holds the input string that we want to interpret. In the Client class, we create instances of the expressions for the rules we defined earlier and then pass them to the interpret method along with the input string.
+
+By using the Interpreter pattern, we can easily extend the language by adding new expressions and rules. We can also reuse the expressions and rules to interpret different input strings.
